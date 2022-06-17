@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon-32x32.png">
+    <title>Responsive</title>
+    <style>
+        body{
+            background-color:  hsl(0, 100%, 74%);
+            font-size:16px;
+            font-family:'Poppins', sans-serif; 
+            background-image: url("bg-intro-desktop.png");
+        }
+        p, h1{
+            color:white
+        }
+        @media(min-width:376px){
+            body{
+                height:100vh;
+                display:flex;
+                align-items:center;
+                justify-content: center;
+                background-image:url("bg-intro-mobile.png")
+            }
+            .outer{
+                display:grid;
+                grid-template-columns:24rem 25rem;
+                grid-template-areas: "item1 item2";
+                grid-gap:3rem;
+            }
+            .item1{
+                width:26rem;
+                grid-area:item1;
+                text-align:initial;
+                display:flex;
+                flex-direction:column;
+                align-items:flex-start;
+                justify-content:center;
+            }
+            .item2{
+                grid-area:item2;
+            }
+            .heading{
+                color:white;
+                font-weight:bolder;
+            }
+            .bluetop{
+                color:white;
+                text-align:center;
+                border-radius:0.625rem;
+                padding:0.625rem;
+                margin-bottom:1.25rem;
+            }
+            .input{
+            border:1px solid black;
+            margin:0.5rem 0;
+            width:80%;
+            height:1.875rem;
+            }
+            .greenbtn{
+                width:80%;
+                text-align: center;
+                color:white;
+                padding:0.625rem;
+                border-radius: 0.3125rem;
+                cursor:pointer;
+            }
+            .paragraph{
+                font-size:0.9rem;
+            }
+            .paragraph2{
+            width:75%;
+            color:black;
+            text-align:center;
+            font-size: 0.625rem;
+            }
+            .reglist{
+                padding:1.25rem 0;
+            }
+            .inputbtm{
+                margin-bottom: 1.25rem;
+            }
+            .terms{
+                color:red;
+            }
+            
+        }
+        @media(max-width:847px){
+            .outer{
+                display:flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+        @media(max-width:375px){
+            body{
+
+            }
+            .outer{
+                display:flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            .heading{
+                text-align: center;
+                color:white;
+                font-weight:200;
+                margin-top:20%;
+            }
+            .paragraph{
+                text-align: center;
+            }
+            .bluetop{
+                width:90%;
+                text-align: center;
+                padding:0.625rem;
+                border-radius: 0.625rem;
+                color:white;
+                margin-top:2.5rem;
+                margin-bottom: 1.25rem;
+            }
+            .greenbtn{
+                width:75%;
+                text-align: center;
+                color:white;
+                padding:0.625rem;
+                border-radius: 0.3125rem;
+                cursor:pointer;
+            }
+            .terms{
+                color:red;
+            }
+            .paragraph2{
+            width:75%;
+            color:black;
+            text-align:center;
+            font-size: 0.625rem;
+            }
+            .input{
+            border:1px solid black;
+            margin:0.5rem 0;
+            width:80%;
+            height:1.875rem;
+            }
+        } 
+        
+        .greenbtn{
+            background-color: hsl(154, 59%, 51%);
+        }
+        .bluetop{
+            background-color: hsl(248, 32%, 49%);
+        }
+        .reglist{
+            background-color: white;
+            border-radius: 0.625rem;
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .input{
+            padding:0.625rem;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="item1">
+            <h1 class="heading">Learn to code by<br> watching others</h1>
+            <p class="paragraph">See how experienced developers solve problems in real-time.Watching scripted tutorials is great 
+            but understanding how developers think is invaluable
+            </p>
+        </div>
+        <div class="item2">
+            <div class="bluetop">
+                Try it free 7 days then $20/mo thereafter
+            </div>
+            <div class="reglist">
+                <input type="text" Value="Jonathan |" class="input">
+                <input type="text" placeholder="Last Name" class="input">
+                <input type="email" placeholder="Email Address" class="input">
+                <input type="password" placeholder="Password" class="input inputbtm">
+                <div class="greenbtn">Claim your free trial</div>
+                <p class="paragraph2">By clicking the green button you are agreeing to our <span class="terms">terms and services</span></p>
+            </div>
+        </div>
+        
+    </div>
+    
+</body>
+</html>
